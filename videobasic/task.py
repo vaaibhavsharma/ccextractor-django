@@ -54,7 +54,7 @@ def fetchsrt(self, id, name):
 
     # Working with DynamoDB
 
-    dynamo_client  =  boto3.resource(service_name = 'dynamodb',region_name = 'ap-south-1',  aws_access_key_id =env('aws_access_key_id'), aws_secret_access_key = env('aws_secret_access_key'))
+    dynamo_client  =  boto3.resource(service_name = 'dynamodb',region_name = 'ap-south-1',  aws_access_key_id =env('AWS_ACCESS_KEY_ID'), aws_secret_access_key = env('AWS_SECRET_ACCESS_KEY'))
     
     product_table = dynamo_client.Table('videoshare')
     file = open("newFile.json",'r')
